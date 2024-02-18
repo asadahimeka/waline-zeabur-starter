@@ -5,8 +5,7 @@
   "description": "An Waline starter repository for deploy to Railway.app",
   "main": "index.js",
   "scripts": {
-    "build": "echo skip",
-    "start": "node index.js"
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,8 @@
   "homepage": "https://github.com/walinejs/railway-starter#readme",
   "dependencies": {
     "@waline/vercel": "1.31.12"
+  },
+  "devDependencies": {
+    "esbuild": "0.20.0"
   }
 }
