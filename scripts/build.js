@@ -80,12 +80,15 @@ staticFileDirs.forEach(dir => {
 })
  
 function copyIfDirExists(src, dest) {
-    if (fs.statSync(src).isDirectory()) {
-        console.info(`Copying ${src} to ${dest}`)
-        fs.cp(src, dest, {recursive: true}, (err) => {
-            if (err) throw err;
-        });
-        return
+    try {        
+        if (fs.statSync(src).isDirectory()) {
+            console.info(`Copying ${src} to ${dest}`)
+            fs.cp(src, dest, {recursive: true}, (err) => {
+                if (err) throw err;
+            });
+            return
+        }
+    } catch (error) {
+        console.warn(`${src} is not a directory`)
     }
-    console.warn(`${src} is not a directory`)
 }
