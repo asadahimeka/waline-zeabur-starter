@@ -4,6 +4,10 @@
   "version": "0.0.0-development",
   "description": "An Waline starter repository for deploy to Railway.app",
   "main": "index.js",
+  "scripts": {
+    "build": "echo skip",
+    "start": "node index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walinejs/railway-starter.git"
@@ -16,6 +20,6 @@
   },
   "homepage": "https://github.com/walinejs/railway-starter#readme",
   "dependencies": {
-    "@waline/vercel": "1.26.5"
+    "@waline/vercel": "1.31.12"
   }
 }
